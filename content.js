@@ -1,9 +1,9 @@
-// Function to detect if text contains Persian/Arabic characters
-function hasPersianText(text) {
+// Function to detect if text contains RTL characters (Arabic, Persian, Hebrew, etc.)
+function hasRTLText(text) {
   if (!text) return false;
-  // Persian/Arabic Unicode range
-  const persianRegex = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/;
-  return persianRegex.test(text);
+  // RTL Unicode ranges: Hebrew, Arabic, Persian, Urdu, etc.
+  const rtlRegex = /[\u0590-\u05FF\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB1D-\uFDFF\uFE70-\uFEFF]/;
+  return rtlRegex.test(text);
 }
 
 // Function to apply RTL to an element
@@ -11,7 +11,7 @@ function applyRTL(element) {
   if (!element) return;
 
   const text = element.textContent || element.innerText;
-  if (hasPersianText(text)) {
+  if (hasRTLText(text)) {
     element.style.direction = 'rtl';
     element.style.textAlign = 'right';
     element.classList.add('rtl-content');

@@ -1,38 +1,54 @@
-# Brainscape RTL Fixer - اکستنشن RTL برای Brainscape
+# Brainscape RTL Fixer
 
-این اکستنشن Chrome برای نمایش صحیح متن‌های فارسی در سایت Brainscape طراحی شده است.
+A Chrome extension that automatically fixes RTL (Right-to-Left) text display for RTL languages (Persian, Arabic, Hebrew, Urdu, etc.) on Brainscape.com.
 
-## نصب
+## Features
 
-1. فایل‌های icon را اضافه کنید:
-   - `icon16.png` (16x16 پیکسل)
-   - `icon48.png` (48x48 پیکسل)
-   - `icon128.png` (128x128 پیکسل)
+- **Automatic Detection**: Intelligently detects RTL characters in flashcards
+- **Smart RTL Application**: Applies right-to-left formatting only to RTL text, leaving LTR content untouched
+- **Dynamic Support**: Works seamlessly with Brainscape's dynamic card loading
+- **Zero Configuration**: Works automatically after installation - no settings required
+- **Universal RTL Support**: Works with Persian (Farsi), Arabic, Hebrew, Urdu, and other RTL scripts
 
-   می‌توانید از هر تصویری استفاده کنید یا از سایت‌های زیر icon دانلود کنید:
-   - https://www.flaticon.com
-   - https://icons8.com
+## Installation
 
-2. Chrome را باز کنید و به آدرس `chrome://extensions/` بروید
+1. Download or clone this repository
+2. Open Chrome and navigate to `chrome://extensions/`
+3. Enable **Developer mode** (toggle in top-right corner)
+4. Click **Load unpacked**
+5. Select the extension folder
+6. Visit [Brainscape](https://www.brainscape.com) and study your RTL flashcards!
 
-3. گزینه "Developer mode" را در گوشه بالا راست فعال کنید
+## How It Works
 
-4. روی "Load unpacked" کلیک کنید
+The extension monitors Brainscape's flashcard interface and:
+1. Scans text content in question and answer cards
+2. Detects RTL Unicode characters (Persian, Arabic, Hebrew, etc.)
+3. Automatically applies RTL styling to RTL content
+4. Preserves LTR formatting for English and other LTR languages
 
-5. پوشه `brainscape-rtl-extension` را انتخاب کنید
+## Technical Details
 
-6. اکستنشن نصب شد! حالا به سایت Brainscape بروید و کارت‌های فارسی را امتحان کنید.
+- **Manifest Version**: 3
+- **Permissions**: None required
+- **Supported Sites**: brainscape.com only
+- **Supported Languages**: All RTL scripts including Persian, Arabic, Hebrew, Urdu, Pashto, Sindhi, and more
 
-## ویژگی‌ها
+## File Structure
 
-- تشخیص خودکار متن فارسی/عربی
-- اعمال خودکار RTL برای کارت‌های سوال و جواب
-- پشتیبانی از محتوای دینامیک (کارت‌های جدید)
-- بدون نیاز به تنظیمات دستی
+```
+├── manifest.json       # Extension configuration
+├── content.js          # Main detection and RTL application logic
+├── rtl-styles.css      # RTL styling rules
+├── icon16.png          # Extension icon (16x16)
+├── icon48.png          # Extension icon (48x48)
+└── icon128.png         # Extension icon (128x128)
+```
 
-## فایل‌ها
+## Contributing
 
-- `manifest.json` - تنظیمات اکستنشن
-- `content.js` - اسکریپت اصلی برای تشخیص و اعمال RTL
-- `rtl-styles.css` - استایل‌های RTL
-- `README.md` - راهنمای استفاده
+Feel free to submit issues and enhancement requests!
+
+## License
+
+MIT License - Feel free to use and modify.

@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Brainscape RTL Fixer",
   "version": "1.0.0",
-  "description": "Fix RTL display for Persian/Farsi text on Brainscape",
+  "description": "Automatically fixes RTL text display for Persian, Arabic, Hebrew, and other RTL languages on Brainscape",
   "permissions": [],
   "content_scripts": [
     {

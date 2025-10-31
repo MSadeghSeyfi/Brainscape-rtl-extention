@@ -1,4 +1,4 @@
-/* RTL styling for Persian/Farsi text on Brainscape */
+/* RTL styling for RTL languages (Arabic, Persian, Hebrew, Urdu, etc.) on Brainscape */
 
 .rtl-content {
   direction: rtl !important;
