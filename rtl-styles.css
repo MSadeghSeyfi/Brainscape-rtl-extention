@@ -1,0 +1,43 @@
+/* RTL styling for Persian/Farsi text on Brainscape */
+
+.rtl-content {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* Fix preview HTML containers */
+.preview-html.rtl-content {
+  direction: rtl !important;
+}
+
+/* Fix card face containers */
+.scf-face.rtl-content,
+.scf-body.rtl-content,
+.scf-body-m.rtl-content {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* Fix paragraphs inside cards */
+.scf-face p,
+.preview-html p {
+  direction: inherit;
+  text-align: inherit;
+}
+
+/* Ensure proper spacing for RTL text */
+.rtl-content br {
+  display: block;
+}
+
+/* Fix alignment for question and answer faces */
+.question-face .rtl-content,
+.answer-face .rtl-content {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+/* Maintain proper line breaks in RTL mode */
+.rtl-content br + * {
+  display: block;
+}

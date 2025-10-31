@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Brainscape RTL Fixer",
+  "version": "1.0.0",
+  "description": "Fix RTL display for Persian/Farsi text on Brainscape",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["https://www.brainscape.com/*"],
+      "js": ["content.js"],
+      "css": ["rtl-styles.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
